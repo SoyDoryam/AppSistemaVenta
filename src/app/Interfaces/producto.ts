@@ -5,5 +5,5 @@ export interface Producto {
     descripcionCategoria: string;
     stock: number;
     precio: string;
-    esActivo: boolean;
+    esActivo: number;
 }
