@@ -21,7 +21,7 @@ export class ProductoComponent implements OnInit, AfterViewInit {
 
   // ? 2 declaracion de variable 
   
-  columnasTabla : string [] = ['nombre','descripcion','stock','precio', 'estado', 'acciones'];
+  columnasTabla : string [] = ['nombre','categoria','stock','precio', 'estado', 'acciones'];
   dataInicio: Producto[] = [];
   dataListaProductos = new MatTableDataSource(this.dataInicio);
   @ViewChild(MatPaginator) paginacionTabla! : MatPaginator;

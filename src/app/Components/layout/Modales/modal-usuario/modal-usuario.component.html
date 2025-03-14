@@ -4,22 +4,27 @@
     <form [formGroup]="formularioUsuario">
         <mat-grid-list cols="1" rowHeight="80px">
             <mat-grid-tile>
-
-            <mat-form-field appearance="outline">
-                <mat-label>Nombre Completo</mat-label>
-                <input matInput autocomplete="off" formControlName="nombreCompleto">
-                <mat-icon matSuffix>account-box</mat-icon>
-            </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-icon matPrefix>account_box</mat-icon>
+                    <mat-label>Nombre Completo</mat-label>
+                    <input matInput autocomplete="off" formControlName="nombreCompleto">
+                    <!-- Icono de cuenta -->
+                </mat-form-field>
             </mat-grid-tile>
+            
             <mat-grid-tile>
                 <mat-form-field appearance="outline">
                     <mat-label>Correo</mat-label>
                     <input matInput autocomplete="off" formControlName="correo">
-                    <mat-icon matSuffix>mail</mat-icon>
+                    <!-- Icono de correo -->
+                    <mat-icon matPrefix>mail</mat-icon>
                 </mat-form-field>
             </mat-grid-tile>
+            
             <mat-grid-tile>
                 <mat-form-field appearance="outline">
+                    <mat-icon matPrefix>security</mat-icon>
+
                     <mat-label>Rol</mat-label>
                     <mat-select formControlName="idRol">
                         <mat-option *ngFor="let item of listaRoles" [value]="item.idRol">
@@ -28,19 +33,23 @@
                     </mat-select>
                 </mat-form-field>
             </mat-grid-tile>
-
+            
             <mat-grid-tile>
                 <mat-form-field appearance="outline">
                     <mat-label>Contraseña</mat-label>
-                    <input matInput [type]="ocultarPassword? 'password' : 'text'" formControlName="clave">
-                        <button mat-icon-button matSuffix (click)="ocultarPassword = !ocultarPassword" type="button">
-                            <mat-icon matSuffix>{{ocultarPassword ? 'visibility_off' :'visibility'}}</mat-icon>
-                        </button>
+                    <input matInput [type]="ocultarPassword ? 'password' : 'text'" formControlName="clave">
+                    <!-- Icono para mostrar/ocultar contraseña -->
+                    <button mat-icon-button matPrefix (click)="ocultarPassword = !ocultarPassword" type="button">
+                        <mat-icon>{{ ocultarPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button>
                 </mat-form-field>
             </mat-grid-tile>
+            
 
             <mat-grid-tile>
                 <mat-form-field appearance="outline">
+                    <mat-icon matPrefix>help_outline</mat-icon>
+
                     <mat-label>Estado</mat-label>
                     <mat-select formControlName="esActivo">
                         <mat-option value="1">Activo</mat-option>
