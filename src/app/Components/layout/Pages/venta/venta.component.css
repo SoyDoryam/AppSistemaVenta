@@ -1,0 +1,17 @@
+.cardtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;  /* Removes default margin on the h1 */
+  }
+
+  table{
+    width: 100%;
+}
+
+mat-form-field{
+    width: 100%;
+}
