@@ -19,7 +19,6 @@ export class ModalCategoriaComponent implements OnInit {
     formularioCategoria: FormGroup;
     tituloAccion: string = 'Agregar';
     botonAccion: string = 'Guardar';
-    ListarCategoria: Categoria[] = [];
 
   // ? 3 constructor 
   constructor(

@@ -37,6 +37,7 @@ export class CategoriaComponent implements OnInit, AfterViewInit {
       next: (data) => {
         if(data.status){
           this.dataListaCategorias.data = data.value;
+          console.log(this.dataListaCategorias)
         }else{
           this._utilidadServicio.mostrarAlerta('No se encontraron datos','Opps!');
         }

@@ -38,7 +38,7 @@ export class ModalProductoComponent implements OnInit {
       idCategoria: ["", Validators.required],
       stock: ["", Validators.required],
       precio: ["", Validators.required],
-      esActivo: [1, Validators.required]
+      esActivo: [1]
     })
 
     // ? 5 validacion de datos de producto 
@@ -81,9 +81,7 @@ export class ModalProductoComponent implements OnInit {
       precio: this.formularioProducto.value.precio,
       esActivo: parseInt(this.formularioProducto.value.esActivo)
     }
-    console.log(_producto);
-    console.log(_producto.esActivo);
-
+    
     if(this.datosProducto == null){
       this._productoService.guardar(_producto).subscribe({
         next:(data) =>{
@@ -100,6 +98,7 @@ export class ModalProductoComponent implements OnInit {
         this._productoService.editar(_producto).subscribe({
           next: (data) =>{
             if(data.status){
+              console.log(_producto)
               this._utilidadService.mostrarAlerta('El producto fue Editado', 'Exito');
               this.modalActual.close("true");
             }else{

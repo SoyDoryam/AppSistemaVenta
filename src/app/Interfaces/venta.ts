@@ -6,5 +6,5 @@ export interface Venta {
     tipoPago: string;
     fechaRegistro?: string;
     totalTexto: string;
-    detallesVenta: DetalleVenta[];
+    detalleVenta: DetalleVenta[];
 }

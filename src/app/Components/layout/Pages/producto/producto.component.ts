@@ -39,6 +39,7 @@ export class ProductoComponent implements OnInit, AfterViewInit {
       next: (data) => {
         if(data.status){
           this.dataListaProductos.data = data.value;
+          
         }else{
           this._utilidadServicio.mostrarAlerta('No se encontraron datos','Opps!');
         }
